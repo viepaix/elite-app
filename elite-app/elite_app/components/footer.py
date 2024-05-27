@@ -5,6 +5,7 @@ import elite_app.styles.styles as styles
 
 from elite_app.views.constants import *
 from elite_app.views.links import footersocials
+from elite_app.styles.colors import *
 
 
 def footer() -> rx.Component:
@@ -14,7 +15,9 @@ def footer() -> rx.Component:
             rx.text(f"Copyright © 2023-{datetime.date.today().year} elite-app"),
             rx.link("POLITICAS", href="politicas"),
                 width="100%",
-                margin_y=styles.Size.DEFAULT
+                margin_y=styles.Size.DEFAULT,
+                color=TextColor.FOOTER.value
         ),
-        footersocials()
+        footersocials(),
+        bg_color=Color.BACKGROUND.value
     )

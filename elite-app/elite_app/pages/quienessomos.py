@@ -3,6 +3,7 @@ import reflex as rx
 import elite_app.styles.styles as styles
 
 from elite_app.views.constants import *
+from elite_app.styles.colors import *
 from elite_app.components.navbar import navbar
 from elite_app.components.footer import footer
 from elite_app.components.floatingbutton import floatingButton
@@ -12,8 +13,9 @@ from elite_app.components.floatingbutton import floatingButton
 def quienesSomos() -> rx.Component:
     return rx.box(
         navbar(),
-        rx.vstack(
-            rx.text("Equipo de ", rx.text.strong("Elite"), color_scheme="yellow"),
+        rx.section(
+            rx.vstack(
+            rx.text("Equipo de ", rx.text.strong("Elite")),
             rx.text("""Bienvenidos a Elite Cab Service, 
                     su mejor opción de transporte en Dallas. 
                     Somos una empresa de taxis comprometida a 
@@ -23,15 +25,14 @@ def quienesSomos() -> rx.Component:
                     latinos, entendiendo y atendiendo las necesidades 
                     específicas de nuestra comunidad con dedicación y 
                     esmero."""),
-            rx.vstack(
-                rx.image(src=f"{IMG1}",
-                        alt="Elite taxi",
-                        width="28em")
+            rx.image(src=IMG2,
+                     width=styles.Size.BIG), 
+            bg_color=Color.BACKGROUND.value,
+            color=TextColor.BODY.value
             ),
-            rx.hstack(
-                rx.box(
-                    rx.section(
-                        rx.heading("Elite Cab Service: Su Socio de Confianza para un Viaje Cómodo y Puntual en Dallas"),
+            rx.vstack(
+                rx.section(
+                    rx.heading("Elite Cab Service: Su Socio de Confianza para un Viaje Cómodo y Puntual en Dallas"),
                         rx.text("""
                                 En Elite Cab Service, sabemos que cada viaje es importante. 
                                 Ya sea que necesite transporte para ir al trabajo, una cita 
@@ -57,14 +58,13 @@ def quienesSomos() -> rx.Component:
                                 de un servicio al cliente excepcional. Cada viaje con Elite Cab Service es una 
                                 oportunidad para demostrar nuestro compromiso con la excelencia, utilizando vehículos
                                 modernos y bien mantenidos para su comodidad y seguridad.
-                                """)
-                    )
-                )
-            ),
+                                """),
                     max_width=styles.MAX_WIDTH,
                     width="100%",
                     margin_y=styles.Size.DEFAULT
-        ),
-        footer(),
-        floatingButton()
+                    )
+            ),
+            footer(),
+            floatingButton()
+        )
     )

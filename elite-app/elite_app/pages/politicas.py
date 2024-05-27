@@ -3,6 +3,7 @@ import reflex as rx
 import elite_app.styles.styles as styles
 
 from elite_app.components.navbar import navbar
+from elite_app.views.header import header
 
 text = """
 Bienvenido a Elite app. En Elite app, valoramos su privacidad y nos comprometemos a proteger la seguridad de sus datos 
@@ -48,6 +49,7 @@ def politicas_pagina() -> rx.Component:
         navbar(),
         rx.center(
             rx.vstack(
+                header(),
                 rx.heading("Politicas De Privacidad De Elite App", align="center"),
                 rx.divider(decorative=True),
                 rx.chakra.text(text), 

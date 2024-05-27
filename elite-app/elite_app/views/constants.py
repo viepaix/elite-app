@@ -16,5 +16,6 @@ ONDELIGHT = "https://elitecabservice.ondelight.app/"
 # Images
 LOGO = "EliteLogo.jpg"
 IMG1 = "IMG1.jpg"
-IMG2 = "IMG2.jpg"
+IMG2 = "https://photos.google.com/album/AF1QipPH9p4tWht5m0leiSdGuze0zD02KdPnGPt-BUXX/photo/AF1QipOn9E96U7ka6F4a9XYyBI6xkTuob8G0T4Wp6xOl"
+
 

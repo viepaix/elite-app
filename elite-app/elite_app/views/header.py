@@ -5,7 +5,7 @@ from elite_app.views.constants import LOGO
 def header() -> rx.Component:
     return rx.center(
         rx.vstack(
-            rx.image(src=LOGO, width="40em", height="100%", border_radius="50%"),
+            rx.image(src=LOGO, width="20em", height="100%", border_radius="50%"),
             margin_right="20px",
             margin_left="10px"
         ), rx.vstack(
@@ -15,5 +15,8 @@ def header() -> rx.Component:
                 el área metropolitana de Dallas-Fort Worth. Nos enorgullecemos de ofrecer 
                 un servicio de transporte de primera clase que combina comodidad, puntualidad
                 y seguridad, garantizando una experiencia de viaje inigualable para nuestros clientes.""")
-        )
+        ),
+        color="rgb(255,255,255)",
+        background_color="rgb(33,33,33)",
+        padding="20px"
     )

@@ -31,9 +31,7 @@ def index() -> rx.Component:
             rx.vstack(
                 header(),
                 main(),
-                max_width=styles.MAX_WIDTH,
-                width="100%",
-                margin_y=styles.Size.DEFAULT
+                align="center"
             )
         ),
         footer(),

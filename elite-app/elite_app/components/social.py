@@ -1,11 +1,13 @@
 import reflex as rx
 
+import elite_app.styles.styles as styles
+
+
 def medias(text: str, url: str) -> rx.Component:
     return rx.link(
-        rx.button(text, width="100%"),
+        rx.button(text, style=styles.button_tittle_style, width="100%", height="3em"),
         href=url,
         is_external=True,
-        width="100%"
     )
 
 def apps(text: str, url: str) -> rx.Component:
